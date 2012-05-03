@@ -1,0 +1,31 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'idea'
+
+group = 'com.popcornteam'
+artifactId = 'restclient'
+version = "1.0.${new Date().format('yyMMdd.HHmm')}"
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+repositories {
+
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+
+    groovy "org.codehaus.groovy:groovy-all:1.8.6"
+
+    compile "org.apache.httpcomponents:httpclient:4.1.2",
+            "org.apache.httpcomponents:httpmime:4.1.2",
+            "com.google.code.gson:gson:2.0",
+            "joda-time:joda-time:2.0"
+
+    testCompile "org.spockframework:spock-core:0.6-groovy-1.8",
+                "cglib:cglib-nodep:2.2.2",
+                "org.objenesis:objenesis:1.2",
+                "org.gmock:gmock:0.8.2"
+}
