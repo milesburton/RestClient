@@ -13,7 +13,7 @@ class RestClientThreadingSpec extends Specification {
         given:
             HttpClientFactory httpClientFactory = new HttpClientFactory()
             HttpClient httpClient = httpClientFactory.makeThreadSafeHttpClient(2)
-            RestClient restClient = new RestClient("http://build.mnetcs.com:4444", [], httpClient)
+            RestClient restClient = new RestClient("http:/google.com", [], httpClient)
             int threads = 4
 
             CyclicBarrier startGate = new CyclicBarrier(threads + 1)
