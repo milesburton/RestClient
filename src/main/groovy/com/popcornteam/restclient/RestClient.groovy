@@ -77,7 +77,7 @@ class RestClient {
         }
     }
 
-    private RestResponse execute(HttpUriRequest httpRequest) {
+    protected RestResponse execute(HttpUriRequest httpRequest) {
 
         RestResponse restResponse
         HttpEntity httpEntity
