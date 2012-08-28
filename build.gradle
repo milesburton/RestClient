@@ -17,14 +17,15 @@ repositories {
 
 dependencies {
 
-    groovy "org.codehaus.groovy:groovy-all:1.8.6"
+    groovy "org.codehaus.groovy:groovy-all:1.6.4"
 
     compile "org.apache.httpcomponents:httpclient:4.1.2",
             "org.apache.httpcomponents:httpmime:4.1.2",
             "com.google.code.gson:gson:2.0",
-            "joda-time:joda-time:2.0"
+            "joda-time:joda-time:2.0",
+            "commons-lang:commons-lang:2.6"
 
-    testCompile "org.spockframework:spock-core:0.6-groovy-1.8",
+    testCompile "org.spockframework:spock-core:0.4-groovy-1.6",
                 "cglib:cglib-nodep:2.2.2",
                 "org.objenesis:objenesis:1.2",
                 "org.gmock:gmock:0.8.2"

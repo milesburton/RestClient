@@ -1,10 +1,12 @@
 package com.popcornteam.restclient.request
 
-import groovy.transform.EqualsAndHashCode
+
+
+import org.apache.commons.lang.builder.EqualsBuilder
+import org.apache.commons.lang.builder.HashCodeBuilder
 import org.apache.http.HttpEntity
 import org.apache.http.entity.StringEntity
 
-@EqualsAndHashCode
 class StringBody implements Body {
 
     final String body
@@ -21,5 +23,15 @@ class StringBody implements Body {
     @Override
     String toString() {
         return body
+    }
+
+    @Override
+    int hashCode() {
+        return HashCodeBuilder.reflectionHashCode(this)
+    }
+
+    @Override
+    boolean equals(Object obj) {
+        return EqualsBuilder.reflectionEquals(this, obj);
     }
 }
